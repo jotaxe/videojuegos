@@ -5,10 +5,13 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/SampleScene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
     path: Assets/Scenes/Menus/StartMenus/StartMenu_Jota.unity
     guid: e9f21621fa2954487a4f8c029c35ecf3
+  - enabled: 1
+    path: Assets/Scenes/Menus/MultiplayerMenu/MultiplayerMenu_Jota.unity
+    guid: 862fce2cd5fb345a196a30d757b386c6
   m_configObjects: {}
