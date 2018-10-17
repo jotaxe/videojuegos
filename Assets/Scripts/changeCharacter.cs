@@ -15,6 +15,7 @@ public class changeCharacter : MonoBehaviour {
     public void SelectKnight(){
         gameObject.GetComponent<Image>().overrideSprite = spritek;
         gameObject.GetComponent<Image>().color = new Vector4(gameObject.GetComponent<Image>().color.r, gameObject.GetComponent<Image>().color.g, gameObject.GetComponent<Image>().color.b, 255);
+        PlayerData.Character = "knight";
     }
 
     public void KnightText(){
@@ -25,6 +26,7 @@ public class changeCharacter : MonoBehaviour {
     public void SelectMage(){
         gameObject.GetComponent<Image>().overrideSprite = spritem;
         gameObject.GetComponent<Image>().color = new Vector4(gameObject.GetComponent<Image>().color.r, gameObject.GetComponent<Image>().color.g, gameObject.GetComponent<Image>().color.b, 255);
+        PlayerData.Character = "mage";
     }
 
     public void MegeText(){
@@ -34,6 +36,7 @@ public class changeCharacter : MonoBehaviour {
     public void SelectBarbarian(){
         gameObject.GetComponent<Image>().overrideSprite = spriteb;
         gameObject.GetComponent<Image>().color = new Vector4(gameObject.GetComponent<Image>().color.r, gameObject.GetComponent<Image>().color.g, gameObject.GetComponent<Image>().color.b, 255);
+        PlayerData.Character = "barbarian";
     }
 
     public void BarbarianText(){
@@ -43,9 +46,11 @@ public class changeCharacter : MonoBehaviour {
     public void SelectDude(){
         gameObject.GetComponent<Image>().overrideSprite = spriteng;
         gameObject.GetComponent<Image>().color = new Vector4(gameObject.GetComponent<Image>().color.r, gameObject.GetComponent<Image>().color.g, gameObject.GetComponent<Image>().color.b, 255);
+        PlayerData.Character = "dude";
     }
 
     public void DudeText(){
         gameObject.GetComponent<Text>().text = "His name is Jimmy.";
     }
+
 }
