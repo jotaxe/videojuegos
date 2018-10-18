@@ -19,8 +19,6 @@ AnimationClip:
   m_PPtrCurves:
   - curve:
     - time: 0
-      value: {fileID: 21300044, guid: 55f63e623e7404ae88f7520d583e044a, type: 3}
-    - time: 0.5
       value: {fileID: 21300136, guid: 55f63e623e7404ae88f7520d583e044a, type: 3}
     - time: 1
       value: {fileID: 21300136, guid: 55f63e623e7404ae88f7520d583e044a, type: 3}
@@ -43,7 +41,6 @@ AnimationClip:
       customType: 23
       isPPtrCurve: 1
     pptrCurveMapping:
-    - {fileID: 21300044, guid: 55f63e623e7404ae88f7520d583e044a, type: 3}
     - {fileID: 21300136, guid: 55f63e623e7404ae88f7520d583e044a, type: 3}
     - {fileID: 21300136, guid: 55f63e623e7404ae88f7520d583e044a, type: 3}
   m_AnimationClipSettings:
@@ -72,7 +69,7 @@ AnimationClip:
   m_HasMotionFloatCurves: 0
   m_GenerateMotionCurves: 0
   m_Events:
-  - time: 0.5
+  - time: 1
     functionName: ShowStats
     data: 
     objectReferenceParameter: {fileID: 11500000, guid: 8c106011c595c4276ba6e71d85915d3d,
