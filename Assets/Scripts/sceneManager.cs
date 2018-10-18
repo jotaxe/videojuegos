@@ -10,7 +10,7 @@ public class sceneManager : MonoBehaviour {
 	}
 
 	public void MultiplayerToGame1(){
-		SceneManager.LoadScene("GameOne_Jota", LoadSceneMode.Single);
+		SceneManager.LoadScene("GameOne_Anty", LoadSceneMode.Single);
 	}
 
 }

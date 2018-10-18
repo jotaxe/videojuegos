@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Tree : MonoBehaviour {
+public class TreeMovement : MonoBehaviour {
     
     private Rigidbody2D rb;
     private Animator anim = null;
@@ -11,7 +11,7 @@ public class Tree : MonoBehaviour {
     bool isCuttingDown, isChopedDown;
 
     int healthPoints = 100;
-    int cutDamage = 50;
+    int cutDamage = 25;
 
 
 
@@ -26,31 +26,22 @@ public class Tree : MonoBehaviour {
 
         //  SetAnimationState();
 
-        bool talando = false;
-        bool talado = false;
-
         // si se toco el collider 
         if(Input.GetMouseButtonDown(0)){
             Vector3 wp = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             CapsuleCollider2D coll = TreeState.GetComponent<CapsuleCollider2D>();
 
             if(coll.OverlapPoint(wp)){
-                talando = true;
-                healthPoints = healthPoints - cutDamage; 
-            }
-
-            if (healthPoints == 0){
-                talado = true;
-                anim.SetBool("isChoppedDown", talado);
-
+                Debug.Log(healthPoints);
+                healthPoints = healthPoints - cutDamage;
+                anim.Play("cutDown");
+                // anim.SetBool("isCutting", true);
+                anim.SetInteger("hp", healthPoints);
+                if(healthPoints == 0){
+                    coll = null;
+                }
             }
         }
-
-
-        anim.SetBool("isCuttingDown", talando);
-        
        
 	}
- 
- 
 }
