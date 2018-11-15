@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Follow : MonoBehaviour {
 
-	public GameObject player;
+    public Transform playerTransform;
 	Vector3 tempVec3 = new Vector3();
 
 	// Use this for initialization
@@ -13,12 +13,20 @@ public class Follow : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
-	void LateUpdate () {
-		Transform playerTransform = player.GetComponent<Transform>(); 
-		tempVec3.x = playerTransform.position.x;
-        tempVec3.y = this.transform.position.y;
-        tempVec3.z = this.transform.position.z;
-        this.transform.position = tempVec3;
+	void LateUpdate () 
+    {
+        if (playerTransform != null)
+        {
+            tempVec3.x = playerTransform.position.x;
+            tempVec3.y = this.transform.position.y;
+            tempVec3.z = this.transform.position.z;
+            this.transform.position = tempVec3;
+        }
 	}
+
+    public void SetTarget(Transform target)
+    {
+        playerTransform = target;
+    }
 
 }

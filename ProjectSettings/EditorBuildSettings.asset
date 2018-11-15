@@ -20,4 +20,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Menus/Games/Game1/GameOne_Jota.unity
     guid: 86302dbecad064bb8a5840b8ad3c6a7b
+  - enabled: 1
+    path: Assets/Scenes/Menus/Games/Game2/GameTwo_Jota.unity
+    guid: 1274fedb47c8843788cf9996d31fe1de
   m_configObjects: {}
