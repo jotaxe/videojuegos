@@ -10,9 +10,11 @@ public class TreeMovement : MonoBehaviour {
     public GameObject TreeState = null;
     bool isCuttingDown, isChopedDown;
 
-    int healthPoints = 100;
-    int cutDamage = 25;
 
+    // game rules
+    int healthPoints = 100;
+    int cutDamage = 5;
+    public float elapsedTime = 0f;  // tiempo de duracion partida
 
 
 	// Use this for initialization
@@ -25,6 +27,7 @@ public class TreeMovement : MonoBehaviour {
 	void Update () {
 
         //  SetAnimationState();
+        elapsedTime += Time.deltaTime;
 
         // si se toco el collider 
         if(Input.GetMouseButtonDown(0)){
@@ -39,6 +42,7 @@ public class TreeMovement : MonoBehaviour {
                 anim.SetInteger("hp", healthPoints);
                 if(healthPoints == 0){
                     coll = null;
+                    Debug.Log(elapsedTime);
                 }
             }
         }
