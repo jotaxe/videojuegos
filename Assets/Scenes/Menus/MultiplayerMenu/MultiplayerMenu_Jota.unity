@@ -1564,7 +1564,7 @@ MonoBehaviour:
   m_OfflineScene: MultiplayerMenu_Jota
   m_OnlineScene: 
   m_SpawnPrefabs: []
-  m_CustomConfig: 0
+  m_CustomConfig: 1
   m_MaxConnections: 4
   m_ConnectionConfig:
     m_PacketSize: 1440
@@ -1606,7 +1606,7 @@ MonoBehaviour:
     m_MaxTimerTimeout: 12000
     m_MinNetSimulatorTimeout: 1
     m_MaxNetSimulatorTimeout: 12000
-  m_Channels: 
+  m_Channels: 0500000000000000
   m_UseWebSockets: 0
   m_UseSimulator: 0
   m_SimulatedLatency: 1
@@ -1622,7 +1622,7 @@ MonoBehaviour:
   m_ShowLobbyGUI: 1
   m_MaxPlayers: 4
   m_MaxPlayersPerConnection: 1
-  m_MinPlayers: 2
+  m_MinPlayers: 1
   m_LobbyPlayerPrefab: {fileID: 114750351743055056, guid: 4d119fbb3b9444eb0959ac3591b06c7a,
     type: 2}
   m_GamePlayerPrefab: {fileID: 1735464240170622, guid: 8d93d9d919b9645bca4423e47f4fb355,
