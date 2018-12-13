@@ -13,8 +13,10 @@ public class TreeMovement : MonoBehaviour {
 
     // game rules
     int healthPoints = 100;
+    public float timeToFinish = 30f;
     int cutDamage = 5;
     public float elapsedTime = 0f;  // tiempo de duracion partida
+    public float duration = 0f;
 
 
 	// Use this for initialization
@@ -29,23 +31,28 @@ public class TreeMovement : MonoBehaviour {
         //  SetAnimationState();
         elapsedTime += Time.deltaTime;
 
-        // si se toco el collider 
-        if(Input.GetMouseButtonDown(0)){
-            Vector3 wp = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-            CapsuleCollider2D coll = TreeState.GetComponent<CapsuleCollider2D>();
+        if (elapsedTime <= timeToFinish)
+        {
+            // si se toco el collider 
+            if(Input.GetMouseButtonDown(0)){
+                Vector3 wp = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+                CapsuleCollider2D coll = TreeState.GetComponent<CapsuleCollider2D>();
 
-            if(coll.OverlapPoint(wp)){
-                Debug.Log(healthPoints);
-                healthPoints = healthPoints - cutDamage;
-                anim.Play("cutDown");
-                // anim.SetBool("isCutting", true);
-                anim.SetInteger("hp", healthPoints);
-                if(healthPoints == 0){
-                    coll = null;
-                    Debug.Log(elapsedTime);
+                if(coll.OverlapPoint(wp)){
+                    Debug.Log(healthPoints);
+                    healthPoints = healthPoints - cutDamage;
+                    anim.Play("cutDown");
+                    // anim.SetBool("isCutting", true);
+                    anim.SetInteger("hp", healthPoints);
+                    if(healthPoints == 0){
+                        coll = null;
+                        Debug.Log(elapsedTime);
+                    }
                 }
-            }
+            } 
         }
+
+        elapsedTime -= duration;
        
 	}
 }
