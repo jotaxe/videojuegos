@@ -13,4 +13,9 @@ public class sceneManager : MonoBehaviour {
 		SceneManager.LoadScene("GameOne_Anty", LoadSceneMode.Single);
 	}
 
+    public void MultiplayerToGame2()
+    {
+        SceneManager.LoadScene("GameTwo_Jota", LoadSceneMode.Single);
+    }
+
 }
