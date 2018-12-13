@@ -1530,6 +1530,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2063987342}
   - component: {fileID: 2063987340}
+  - component: {fileID: 2063987341}
   m_Layer: 0
   m_Name: Network
   m_TagString: Untagged
@@ -1556,14 +1557,14 @@ MonoBehaviour:
   m_RunInBackground: 1
   m_ScriptCRCCheck: 1
   m_MaxDelay: 0.01
-  m_LogLevel: 2
+  m_LogLevel: 0
   m_PlayerPrefab: {fileID: 0}
   m_AutoCreatePlayer: 1
   m_PlayerSpawnMethod: 0
   m_OfflineScene: MultiplayerMenu_Jota
   m_OnlineScene: 
   m_SpawnPrefabs: []
-  m_CustomConfig: 0
+  m_CustomConfig: 1
   m_MaxConnections: 4
   m_ConnectionConfig:
     m_PacketSize: 1440
@@ -1605,7 +1606,7 @@ MonoBehaviour:
     m_MaxTimerTimeout: 12000
     m_MinNetSimulatorTimeout: 1
     m_MaxNetSimulatorTimeout: 12000
-  m_Channels: 
+  m_Channels: 0500000000000000
   m_UseWebSockets: 0
   m_UseSimulator: 0
   m_SimulatedLatency: 1
@@ -1622,12 +1623,28 @@ MonoBehaviour:
   m_MaxPlayers: 4
   m_MaxPlayersPerConnection: 1
   m_MinPlayers: 1
-  m_LobbyPlayerPrefab: {fileID: 0}
+  m_LobbyPlayerPrefab: {fileID: 114750351743055056, guid: 4d119fbb3b9444eb0959ac3591b06c7a,
+    type: 2}
   m_GamePlayerPrefab: {fileID: 1735464240170622, guid: 8d93d9d919b9645bca4423e47f4fb355,
     type: 2}
   m_LobbyScene: MultiplayerMenu_Jota
   m_PlayScene: GameTwo_Jota
   lobbySlots: []
+--- !u!114 &2063987341
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2063987339}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 227461547, guid: dc443db3e92b4983b9738c1131f555cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  manager: {fileID: 0}
+  showGUI: 1
+  offsetX: 200
+  offsetY: 0
 --- !u!4 &2063987342
 Transform:
   m_ObjectHideFlags: 0
