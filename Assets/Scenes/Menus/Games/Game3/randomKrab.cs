@@ -22,13 +22,13 @@ public class randomKrab2 : MonoBehaviour
 
     // Use this for initialization
 
-    positionX= [ -11.42, -3.78, 3.66, 11.3 ]; 
-    positionY= [ 2.52, , 0.44, -1.64, -3.67 ]; 
-    void Start()
-    {
-        Vector3 respawnPos = center + new Vector2
+    //positionX= [ -11.42, -3.78, 3.66, 11.3 ]; 
+    //positionY= [ 2.52, , 0.44, -1.64, -3.67 ]; 
+    //void Start()
+    //{
+    //    Vector3 respawnPos = center + new Vector2
 
-    }
+    //}
 
 	private void OnTriggerEnter(Collider hit)
 	{
