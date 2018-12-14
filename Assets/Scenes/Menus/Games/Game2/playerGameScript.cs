@@ -31,6 +31,7 @@ public class playerGameScript : NetworkBehaviour {
             score += 1;
 		}
 
+
 		
 		if(Input.GetKey(KeyCode.LeftArrow)){
 			transform.position += Vector3.left * speed * Time.deltaTime;
