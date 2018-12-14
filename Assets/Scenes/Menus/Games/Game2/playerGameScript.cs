@@ -10,7 +10,9 @@ public class playerGameScript : NetworkBehaviour {
     public ScoreTracker tracker;
     [SyncVar]
     public int score = 0;
+    public AudioClip jumpSound;  
 
+    private AudioSource source;
 
 	// Use this for initialization
     void Start () {
@@ -35,6 +37,7 @@ public class playerGameScript : NetworkBehaviour {
 		
 		if(Input.GetKey(KeyCode.UpArrow)){
 			transform.position += Vector3.up * 7 * Time.deltaTime;
+            source.PlayOneShot(jumpSound, 1f); 
 		}
 	}
     //public override void OnStartLocalPlayer()
