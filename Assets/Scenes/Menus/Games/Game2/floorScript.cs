@@ -6,8 +6,12 @@ public class floorScript : MonoBehaviour {
 
 
 	public GameObject platform;
-	public Transform refPoint;
-	private float platformWidth;
+
+    public Transform refPoint;
+	
+    private float platformWidth;
+
+
 	void Start () {
 		platformWidth = platform.GetComponent<BoxCollider2D>().size.x;
 	}

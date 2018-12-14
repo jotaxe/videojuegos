@@ -942,6 +942,7 @@ GameObject:
   - component: {fileID: 2092432725}
   - component: {fileID: 2092432726}
   - component: {fileID: 2092432727}
+  - component: {fileID: 2092432728}
   m_Layer: 0
   m_Name: Tree
   m_TagString: Untagged
@@ -1091,7 +1092,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -1200,3 +1201,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   statsBox: {fileID: 763118008}
+--- !u!114 &2092432728
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2092432717}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ef774ed290d84f0d9c56c41f306448a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  networkManager: {fileID: 0}
+  lobbyManager: {fileID: 0}
+  ip: {fileID: 0}
