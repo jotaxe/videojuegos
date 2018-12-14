@@ -55,6 +55,7 @@ public class TreeMovement : MonoBehaviour {
                     anim.SetInteger("hp", healthPoints);
                     if (healthPoints == 0)
                     {
+                        gameObject.GetComponent<NetMan>().GameOver();
                         coll = null;
                         gameFinished = true;
                         Debug.Log(elapsedTime);

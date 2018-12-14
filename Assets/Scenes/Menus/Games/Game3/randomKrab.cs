@@ -67,12 +67,8 @@ public class randomKrab : MonoBehaviour
                     { 
                         colaider = null;
                         gameFinished = true;
-
-                        //Invoke("waitForSec", 2);
                         StartCoroutine(delay());
-                        //GameObject net = GameObject.Find("Network");
-                        //NetworkManager netMan = net.GetComponent<NetworkManager>();
-                        //netMan.ServerChangeScene("mapsChoiceMenu");
+                        gameObject.GetComponent<NetMan>().GameOver();
                     }
                     UpdateScoreText();
                     transform.position = new Vector3(positionX[auxIndexX], positionY[auxIndexY], transform.position.z);
