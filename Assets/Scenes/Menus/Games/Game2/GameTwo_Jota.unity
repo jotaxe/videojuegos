@@ -578,13 +578,14 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 518038867}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8d860470b1472481899212ab3a85008a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   gameScript: {fileID: 0}
   score: {fileID: 1970322990}
+  gameEnded: 0
 --- !u!1 &679507508
 GameObject:
   m_ObjectHideFlags: 0
