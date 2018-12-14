@@ -14,20 +14,21 @@ static bool cambiado = false;
 public Sprite highlightOriginal;
 	
 	// Update is called once per frame
-	public void highlightback (GameObject stage) {
+	[ClientRpc]
+	public void RpcHighlightback (GameObject stage) {
 
-		if(!isServer){
-			Debug.Log("No soy server po");
-			return;
-		}
+		
 		if(stage.name == "Game1"){
-			SceneManager.LoadScene("GameOne_Anty", LoadSceneMode.Single);
+			SceneManager.LoadSceneAsync("GameOne_Anty", LoadSceneMode.Additive);
+			// SceneManager.LoadScene("GameOne_Anty", LoadSceneMode.Single);
 		}
 		else if (stage.name == "Game2"){
-			SceneManager.LoadScene("GameTwo_Jota", LoadSceneMode.Single);
+			SceneManager.LoadSceneAsync("GameTwo_Jota", LoadSceneMode.Additive);
+			// SceneManager.LoadScene("GameTwo_Jota", LoadSceneMode.Single);
 		}
 		else if (stage.name == "Game3"){
-			SceneManager.LoadScene("GameTwo_Jota", LoadSceneMode.Single);
+			SceneManager.LoadSceneAsync("GameThree_Jota", LoadSceneMode.Additive);
+			// SceneManager.LoadScene("GameThree_Jota", LoadSceneMode.Single);
 		}
 
 
