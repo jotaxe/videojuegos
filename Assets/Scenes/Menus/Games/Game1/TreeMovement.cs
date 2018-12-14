@@ -8,7 +8,7 @@ public class TreeMovement : MonoBehaviour {
     private Animator anim = null;
 
     public GameObject TreeState = null;
-    bool isCuttingDown, isChopedDown;
+    public AudioClip cutSound; 
 
 
     // game rules
@@ -17,17 +17,17 @@ public class TreeMovement : MonoBehaviour {
     int cutDamage = 5;
     public float elapsedTime = 0f;  // tiempo de duracion partida
     public float duration = 0f;
-
-
+    private AudioSource source;  
+ 
 	// Use this for initialization
 	void Start () {
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
+        source = GetComponent<AudioSource>();
 	}
 	
 	// Update is called once per frame
 	void Update () {
-
         //  SetAnimationState();
         elapsedTime += Time.deltaTime;
 
@@ -41,8 +41,8 @@ public class TreeMovement : MonoBehaviour {
                 if(coll.OverlapPoint(wp)){
                     Debug.Log(healthPoints);
                     healthPoints = healthPoints - cutDamage;
-                    anim.Play("cutDown");
-                    // anim.SetBool("isCutting", true);
+                    source.PlayOneShot(cutSound, 1f);
+                    anim.Play("cutDown"); 
                     anim.SetInteger("hp", healthPoints);
                     if(healthPoints == 0){
                         coll = null;

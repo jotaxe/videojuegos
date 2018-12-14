@@ -23,11 +23,6 @@ public class playerGameScript : NetworkBehaviour {
 	void Update () {
 		if(Input.GetKey(KeyCode.RightArrow)){
 			transform.position += Vector3.right * speed * Time.deltaTime;
-
-            if(!isServer){
-                return;
-            }
-
             score += 1;
 		}
 
