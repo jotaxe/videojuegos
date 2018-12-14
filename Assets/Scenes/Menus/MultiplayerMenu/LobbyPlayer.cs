@@ -7,8 +7,8 @@ public class LobbyPlayer : NetworkLobbyPlayer {
 
     public override void OnClientEnterLobby()
     {
-        base.OnClientEnterLobby();
         readyToBegin = true;
+        base.OnClientEnterLobby();
     }
 
 }

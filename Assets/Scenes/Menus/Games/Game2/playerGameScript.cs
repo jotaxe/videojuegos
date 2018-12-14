@@ -37,17 +37,18 @@ public class playerGameScript : NetworkBehaviour {
 			transform.position += Vector3.up * 7 * Time.deltaTime;
 		}
 	}
-    public override void OnStartLocalPlayer()
-    {
-        Camera.main.GetComponent<Follow>().SetTarget(gameObject.transform);
-        gameObject.tag = "Player";
-        Debug.Log(gameObject.tag);
-    }
+    //public override void OnStartLocalPlayer()
+    //{
+    //    Camera.main.GetComponent<Follow>().SetTarget(gameObject.transform);
+    //    gameObject.tag = "Player";
+    //    Debug.Log(gameObject.tag);
+    //}
 
 	private void OnCollisionEnter2D(Collision2D collision)
 	{
         if(collision.gameObject.tag == "Orc"){
             tracker.gameEnded = true;
+            gameObject.GetComponent<NetMan>().GameOver();
         }
 	}
 }
