@@ -18,7 +18,7 @@ public class cratesScript : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		if (transform.position.x < refPoint.position.x){
-			transform.position = new Vector3(transform.position.x + platformWidth +  2 * crateWidth, transform.position.y, transform.position.z);
+			transform.position = new Vector3(transform.position.x + platformWidth +  3 * crateWidth, transform.position.y, transform.position.z);
 		}
 	}
 }

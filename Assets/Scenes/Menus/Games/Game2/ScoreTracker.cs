@@ -4,19 +4,20 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class ScoreTracker : MonoBehaviour {
-    
-    public playerGameScript gameScript;
+
+    public GameObject player;
     public Text score;
     public bool gameEnded = false;
+    public playerGameScript gameScript;
 	// Use this for initialization
 	void Start () {
         GameObject Player = GameObject.FindWithTag("Player");
-        gameScript = Player.GetComponent<playerGameScript>();
+        gameScript = player.GetComponent<playerGameScript>();
 	}
 	
 	// Update is called once per frame
     void Update () {
-        score.text = gameScript.score.ToString();
+        score.text = "Score: " + gameScript.score.ToString();
         if(gameEnded){
             Time.timeScale = 0;
         }

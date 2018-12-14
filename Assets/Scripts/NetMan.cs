@@ -57,6 +57,12 @@ public class NetMan : MonoBehaviour {
 
     }
 
+    public void GameOver(){
+        GameObject net = GameObject.Find("Network");
+        networkManager = net.GetComponent<NetworkManager>();
+        networkManager.ServerChangeScene("mapsChoiceMenu");
+    }
+
 	// Use this for initialization
 	void Start () {
 		
