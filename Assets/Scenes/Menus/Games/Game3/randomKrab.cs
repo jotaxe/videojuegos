@@ -90,7 +90,7 @@ public class randomKrab : MonoBehaviour
     }
     void UpdateScoreText()
     {
-        scoreText.text = hitTimes + " Hits " + "in " + elapsedTime + " seconds";
+        scoreText.text = hitTimes + " Hits ";
 
     }
 

@@ -20,6 +20,7 @@ public class TreeMovement : MonoBehaviour {
     int cutDamage = 5;
     int hits = 0;
     public float elapsedTime = 0f;  // tiempo de duracion partida
+    public float elapsedTimeInt = 0;
     public float duration = 0f;
     public Text scoreText; 
 
@@ -56,14 +57,13 @@ public class TreeMovement : MonoBehaviour {
                     anim.SetInteger("hp", healthPoints);
                     if (healthPoints == 0)
                     {
-                        //StartCoroutine(delay());
+                        StartCoroutine(Delay());
+
                         //Invoke("GoBackToMenu", 4f);
                         coll = null;
                         gameFinished = true;
                         Debug.Log(elapsedTime); 
                         gameObject.GetComponent<NetMan>().GameOver();
-
-                  
                     }
                     UpdateScoreText();
                 }
@@ -71,16 +71,20 @@ public class TreeMovement : MonoBehaviour {
         }
         elapsedTime -= duration;
     }
-    void goBackToMenu(){
-        gameObject.GetComponent<NetMan>().GameOver();
-    }
-    //IEnumerator delay()
-    //{
-    //    yield return new WaitForSeconds(1000);
+    //void goBackToMenu(){
+    //    gameObject.GetComponent<NetMan>().GameOver();
     //}
+    IEnumerator Delay()
+    {
+        print(Time.time);
+        yield return new WaitForSeconds(50f);
+        print(Time.time);
+    }
     void UpdateScoreText()
     {
-        scoreText.text = hits + " Hits " + "in " + elapsedTime + " seconds";
+        elapsedTimeInt = (int)elapsedTime;
+        scoreText.text = hits + " Hits " + "in " + 
+            elapsedTimeInt + " seconds";
 
     }
 
