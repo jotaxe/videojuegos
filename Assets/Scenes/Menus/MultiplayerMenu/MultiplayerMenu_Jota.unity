@@ -2045,7 +2045,7 @@ MonoBehaviour:
   m_LogLevel: 2
   m_PlayerPrefab: {fileID: 0}
   m_AutoCreatePlayer: 1
-  m_PlayerSpawnMethod: 0
+  m_PlayerSpawnMethod: 1
   m_OfflineScene: MultiplayerMenu_Jota
   m_OnlineScene: 
   m_SpawnPrefabs: []
@@ -2140,6 +2140,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   networkManager: {fileID: 0}
+  lobbyManager: {fileID: 0}
   ip: {fileID: 1535022373}
 --- !u!1 &2101546397
 GameObject:
