@@ -36,7 +36,8 @@ public class TreeMovement : MonoBehaviour {
 	// Update is called once per frame
 	void Update ()
     {
-        if (gameFinished == false ) {
+        if (gameFinished == false) 
+        {
             elapsedTime += Time.deltaTime;
             // si se toco el collider 
             if (Input.GetMouseButtonDown(0))
@@ -64,10 +65,11 @@ public class TreeMovement : MonoBehaviour {
         }
         elapsedTime -= duration;
     }
-   void UpdateScoreText(){  
-            scoreText.text = hits + " Hits " + "in " + elapsedTime + " seconds";
-        
-        }
+    void UpdateScoreText()
+    {
+        scoreText.text = hits + " Hits " + "in " + elapsedTime + " seconds";
+
+    }
 
    
 }
