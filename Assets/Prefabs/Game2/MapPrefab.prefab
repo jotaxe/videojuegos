@@ -24,6 +24,7 @@ GameObject:
   - component: {fileID: 114379116666000054}
   - component: {fileID: 50035408270500898}
   - component: {fileID: 68167161840018766}
+  - component: {fileID: 114598661870852012}
   m_Layer: 0
   m_Name: MapPrefab
   m_TagString: Player
@@ -132,7 +133,19 @@ MonoBehaviour:
     i14: 215
     i15: 241
   m_ServerOnly: 0
-  m_LocalPlayerAuthority: 1
+  m_LocalPlayerAuthority: 0
+--- !u!114 &114598661870852012
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1460384191081312}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 22e187a0e74f74eb0a9add85eaab2928, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ShowLobbyGUI: 1
 --- !u!212 &212170354440240456
 SpriteRenderer:
   m_ObjectHideFlags: 1
