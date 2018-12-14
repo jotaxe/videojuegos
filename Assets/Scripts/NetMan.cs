@@ -16,11 +16,7 @@ public class NetMan : MonoBehaviour {
 	{
         networkManager = GetComponent<NetworkManager>();
         lobbyManager = GetComponent<NetworkLobbyManager>();
-        if(lobbyManager){
-            Debug.Log(lobbyManager);  
-        }else{
-            Debug.Log("no Existe");
-        }
+
 
     
 	}
@@ -42,15 +38,23 @@ public class NetMan : MonoBehaviour {
 
 
     public void StartGame2(){
-        Debug.Log(lobbyManager.onlineScene);
+        GameObject net = GameObject.Find("Network");
+        networkManager = net.GetComponent<NetworkManager>();
+        networkManager.ServerChangeScene("GameTwo_Jota");
+
     }
 
     public void StartGame3(){
-        Debug.Log(lobbyManager.onlineScene);
+        GameObject net = GameObject.Find("Network");
+        networkManager = net.GetComponent<NetworkManager>();
+        networkManager.ServerChangeScene("GameThree_Jota");
     }
 
     public void StartGame1(){
-        Debug.Log(lobbyManager.onlineScene);
+        GameObject net = GameObject.Find("Network");
+        networkManager = net.GetComponent<NetworkManager>();
+        networkManager.ServerChangeScene("GameOne_Anty");
+
     }
 
 	// Use this for initialization
