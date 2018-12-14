@@ -18,6 +18,7 @@ public class playerGameScript : NetworkBehaviour {
     void Start () {
         Camera Cam = Camera.main;
         tracker = Cam.GetComponent<ScoreTracker>();
+        source = GetComponent<AudioSource>();
 	}
 	
 	// Update is called once per frame
@@ -35,8 +36,8 @@ public class playerGameScript : NetworkBehaviour {
 		}
 
 		
-		if(Input.GetKey(KeyCode.UpArrow)){
-			transform.position += Vector3.up * 7 * Time.deltaTime;
+		if(Input.GetKeyDown(KeyCode.UpArrow)){
+			transform.position += Vector3.up * 42 * Time.deltaTime;
             source.PlayOneShot(jumpSound, 1f); 
 		}
 	}

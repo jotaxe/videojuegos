@@ -669,6 +669,7 @@ GameObject:
   - component: {fileID: 1405857182}
   - component: {fileID: 1405857183}
   - component: {fileID: 1405857184}
+  - component: {fileID: 1405857185}
   m_Layer: 0
   m_Name: krabAlive
   m_TagString: Untagged
@@ -891,6 +892,20 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1405857185
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1405857178}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ef774ed290d84f0d9c56c41f306448a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  networkManager: {fileID: 0}
+  lobbyManager: {fileID: 0}
+  ip: {fileID: 0}
 --- !u!1 &1556619216
 GameObject:
   m_ObjectHideFlags: 0
