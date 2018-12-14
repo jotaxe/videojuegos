@@ -1,7 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
+using UnityEngine.UI; 
+using UnityEngine.Networking;
 
 public class TreeMovement : MonoBehaviour {
     
@@ -55,10 +56,14 @@ public class TreeMovement : MonoBehaviour {
                     anim.SetInteger("hp", healthPoints);
                     if (healthPoints == 0)
                     {
-                        gameObject.GetComponent<NetMan>().GameOver();
+                        //StartCoroutine(delay());
+                        //Invoke("GoBackToMenu", 4f);
                         coll = null;
                         gameFinished = true;
-                        Debug.Log(elapsedTime);
+                        Debug.Log(elapsedTime); 
+                        gameObject.GetComponent<NetMan>().GameOver();
+
+                  
                     }
                     UpdateScoreText();
                 }
@@ -66,6 +71,13 @@ public class TreeMovement : MonoBehaviour {
         }
         elapsedTime -= duration;
     }
+    void goBackToMenu(){
+        gameObject.GetComponent<NetMan>().GameOver();
+    }
+    //IEnumerator delay()
+    //{
+    //    yield return new WaitForSeconds(1000);
+    //}
     void UpdateScoreText()
     {
         scoreText.text = hits + " Hits " + "in " + elapsedTime + " seconds";
